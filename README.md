@@ -108,12 +108,6 @@ Navigasyon barındaki dil butonu ile İngilizce ve Türkçe arasında geçiş ya
 
 ---
 
-## 📝 Lisans
-
-Bu proje açık kaynaklıdır ve [MIT Lisansı](LICENSE) altında kullanılabilir.
-
----
-
 ## 👤 Author
 
 **Tuğba Çağla EREN**
@@ -123,3 +117,10 @@ Bu proje açık kaynaklıdır ve [MIT Lisansı](LICENSE) altında kullanılabili
 - 💼 LinkedIn: [linkedin.com/in/cagla-eren](https://www.linkedin.com/in/cagla-eren/)
 - 📧 Email: [tugbacaglaeren@gmail.com](mailto:tugbacaglaeren@gmail.com)
 - 📸 Instagram: [instagram.com/cagllaeren](https://www.instagram.com/cagllaeren/)
+
+---
+
+## 📝 Lisans
+
+Bu proje açık kaynaklıdır ve [MIT Lisansı](LICENSE) altında kullanılabilir.
+
