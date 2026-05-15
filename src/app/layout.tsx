@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   keywords: ["AI", "Data Science", "Machine Learning", "RAG", "LLM", "Python", "Portfolio"],
   authors: [{ name: "Tuğba Çağla EREN" }],
   icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%238B5CF6'/><stop offset='100%25' style='stop-color:%23EC4899'/></linearGradient></defs><text y='.9em' font-size='70' x='5' fill='url(%23g)' font-weight='bold' font-family='sans-serif'>TÇE</text></svg>",,
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%238B5CF6'/><stop offset='100%25' style='stop-color:%23EC4899'/></linearGradient></defs><text y='.9em' font-size='70' x='5' fill='url(%23g)' font-weight='bold' font-family='sans-serif'>TÇE</text></svg>",
   },
   openGraph: {
     title: "Tuğba Çağla EREN - AI & Data Science",
