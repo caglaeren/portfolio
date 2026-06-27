@@ -67,6 +67,8 @@ const T = {
       intern1: { title: 'Software Engineer Intern', company: 'Atosis Araç Takip ve İletişim Sistemleri', period: 'Jul 2020 – Aug 2020', desc: 'Developed a .NET-based data integration system that crawled and migrated over 12,000 vehicle listings from external web platforms to a centralized MS SQL Server database, reducing manual data entry by 85%.' },
       intern2: { title: 'Full Stack Developer Intern', company: 'Basarsoft', period: 'Jul 2022 – Sep 2022', desc: 'Developed a full-stack geospatial data management system using .NET Web API, PostgreSQL, OpenLayers, Node.js, Bootstrap, and JavaScript for real-time mapping.' },
       free: { title: 'Freelance AI & Data Science Projects', company: 'Self-employed', period: 'Mar 2024 – Present', desc: 'Building AI, data science, and machine learning projects. Focusing on LLM/RAG systems, NLP, and scalable ML solutions.' },
+      ambassador: { title: 'Women in AI Ambassador for Türkiye', company: 'Women in AI by FemTechConf', period: 'Jun 2026 – Present', desc: 'Volunteer role representing Türkiye in the global Women in AI community by FemTechConf. Advocating for women in AI and helping grow the local GenAI ecosystem.' },
+      flyrank: { title: 'Backend AI Engineer Intern', company: 'FlyRank', period: 'Jul 2026 – Present', desc: 'Independent, project-based backend AI engineering role (not a university internship). Building real AI features end-to-end, with a focus on LLM/RAG applications and scalable backend services.' },
     },
     projects: {
       title: 'Projects',
@@ -114,6 +116,8 @@ const T = {
       intern1: { title: 'Yazılım Mühendisi Stajyeri', company: 'Atosis Araç Takip ve İletişim Sistemleri', period: 'Tem 2020 – Ağu 2020', desc: "Harici web platformlarından 12.000'den fazla araç ilanını merkezi MS SQL Server veritabanına crawling ve migrate eden .NET tabanlı bir veri entegrasyon sistemi geliştirdim." },
       intern2: { title: 'Full Stack Geliştirici Stajyeri', company: 'Basarsoft', period: 'Tem 2022 – Eyl 2022', desc: '.NET Web API, PostgreSQL, OpenLayers, Node.js, Bootstrap ve JavaScript kullanarak gerçek zamanlı haritalama için tam kapsamlı bir CBS veri yönetim sistemi geliştirdim.' },
       free: { title: 'Serbest AI & Veri Bilimi Projeleri', company: 'Serbest Çalışma', period: 'Mar 2024 – Devam Ediyor', desc: 'Yapay zeka, veri bilimi ve makine öğrenmesi projeleri geliştiriyorum. LLM/RAG sistemleri, NLP ve ölçeklenebilir ML çözümlerine odaklanıyorum.' },
+      ambassador: { title: 'Women in AI Ambassador for Türkiye', company: 'Women in AI by FemTechConf', period: 'Haz 2026 – Devam Ediyor', desc: "Women in AI by FemTechConf'in küresel Women in AI topluluğunda Türkiye'yi temsil eden gönüllü rol. Yapay zeka alanında kadınları destekliyor ve yerel GenAI ekosisteminin büyümesine katkıda bulunuyorum." },
+      flyrank: { title: 'Backend AI Engineer Intern', company: 'FlyRank', period: 'Tem 2026 – Devam Ediyor', desc: 'Bağımsız, proje bazlı backend AI mühendisliği rolü (üniversite stajı değil). LLM/RAG uygulamaları ve ölçeklenebilir backend servislerine odaklanarak uçtan uca gerçek AI özellikleri geliştiriyorum.' },
     },
     projects: {
       title: 'Projeler',
@@ -769,6 +773,8 @@ export default function Home() {
               <div className="absolute left-6 md:left-1/2 md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-[oklch(0.6_0.2_295)] via-[oklch(0.5_0.18_310)] to-[oklch(0.4_0.15_320)] opacity-30" />
 
               {[
+                { ...t.timeline.flyrank, icon: Briefcase, isLeft: true },
+                { ...t.timeline.ambassador, icon: Globe, isLeft: false },
                 { ...t.timeline.free, icon: Sparkles, isLeft: true },
                 { ...t.timeline.graduation, icon: GraduationCap, isLeft: false },
                 { ...t.timeline.intern2, icon: Briefcase, isLeft: true },
