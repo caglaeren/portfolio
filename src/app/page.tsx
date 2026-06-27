@@ -24,6 +24,7 @@ import {
   Database,
   Server,
   Globe,
+  Award,
   X,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -613,6 +614,24 @@ export default function Home() {
               >
                 {t.hero.tagline}
               </motion.p>
+
+              {/* Women in AI Ambassador badge */}
+              <motion.a
+                href="https://womeninaiglobalsummit.com/attendees/ambassadors"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-gradient-to-r from-[oklch(0.6_0.22_295)]/10 to-[oklch(0.55_0.2_310)]/10 border border-primary/30 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 group"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.7 }}
+                whileHover={{ scale: 1.03 }}
+              >
+                <Award className="size-4 text-primary" />
+                <span className="text-sm font-medium text-primary">
+                  Women in AI Ambassador for Türkiye
+                </span>
+                <ExternalLink className="size-3 text-primary/60 group-hover:text-primary transition-colors" />
+              </motion.a>
 
               {/* Description */}
               <motion.p
