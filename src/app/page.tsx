@@ -117,8 +117,8 @@ const T = {
       intern1: { title: 'Yazılım Mühendisi Stajyeri', company: 'Atosis Araç Takip ve İletişim Sistemleri', period: 'Tem 2020 – Ağu 2020', desc: "Harici web platformlarından 12.000'den fazla araç ilanını merkezi MS SQL Server veritabanına crawling ve migrate eden .NET tabanlı bir veri entegrasyon sistemi geliştirdim." },
       intern2: { title: 'Full Stack Geliştirici Stajyeri', company: 'Basarsoft', period: 'Tem 2022 – Eyl 2022', desc: '.NET Web API, PostgreSQL, OpenLayers, Node.js, Bootstrap ve JavaScript kullanarak gerçek zamanlı haritalama için tam kapsamlı bir CBS veri yönetim sistemi geliştirdim.' },
       free: { title: 'Serbest AI & Veri Bilimi Projeleri', company: 'Serbest Çalışma', period: 'Mar 2024 – Devam Ediyor', desc: 'Yapay zeka, veri bilimi ve makine öğrenmesi projeleri geliştiriyorum. LLM/RAG sistemleri, NLP ve ölçeklenebilir ML çözümlerine odaklanıyorum.' },
-      ambassador: { title: 'Women in AI Ambassador for Türkiye', company: 'Women in AI by FemTechConf', period: 'Haz 2026 – Devam Ediyor', desc: "Women in AI by FemTechConf'in küresel Women in AI topluluğunda Türkiye'yi temsil eden gönüllü rol. Yapay zeka alanında kadınları destekliyor ve yerel GenAI ekosisteminin büyümesine katkıda bulunuyorum." },
-      flyrank: { title: 'Backend AI Engineer Intern', company: 'FlyRank', period: 'Tem 2026 – Devam Ediyor', desc: 'Bağımsız, proje bazlı backend AI mühendisliği rolü (üniversite stajı değil). LLM/RAG uygulamaları ve ölçeklenebilir backend servislerine odaklanarak uçtan uca gerçek AI özellikleri geliştiriyorum.' },
+      ambassador: { title: "Türkiye için Women in AI Elçisi", company: 'Women in AI by FemTechConf', period: 'Haz 2026 – Devam Ediyor', desc: "Women in AI by FemTechConf'in küresel Women in AI topluluğunda Türkiye'yi temsil eden gönüllü rol. Yapay zeka alanında kadınları destekliyor ve yerel GenAI ekosisteminin büyümesine katkıda bulunuyorum." },
+      flyrank: { title: 'Backend AI Mühendisi Stajyeri', company: 'FlyRank', period: 'Tem 2026 – Devam Ediyor', desc: 'Bağımsız, proje bazlı backend AI mühendisliği rolü (üniversite stajı değil). LLM/RAG uygulamaları ve ölçeklenebilir backend servislerine odaklanarak uçtan uca gerçek AI özellikleri geliştiriyorum.' },
     },
     projects: {
       title: 'Projeler',
@@ -147,43 +147,82 @@ const T = {
 
 /* ─── DATA ─── */
 
-const PROJECTS_DATA = [
-  {
-    title: 'AI Fraud Detection System',
-    desc: 'Real-time fraud detection system using TensorFlow, FastAPI, Redis, and WebSockets for live transaction monitoring. Achieved 0.95 ROC-AUC on imbalanced financial data with 0.17% fraud cases.',
-    tags: ['Python', 'TensorFlow', 'FastAPI', 'Redis', 'Scikit-learn', 'Streamlit'],
-    href: 'https://github.com/caglaeren/fraud-ai-system',
-    icon: Brain,
-  },
-  {
-    title: 'Genomic-RAG for RARS1',
-    desc: 'Local RAG system using LangChain and ChromaDB for precise genomic research data analysis with an integrated local LLM, enhancing research efficiency by 40%.',
-    tags: ['Python', 'LangChain', 'ChromaDB', 'Ollama', 'RAG'],
-    href: 'https://github.com/caglaeren/genomic-rag-rars1',
-    icon: Dna,
-  },
-  {
-    title: 'Algerian Forest Fires Prediction',
-    desc: 'Machine learning project predicting forest fires in the Algerian region using data analysis and classification models.',
-    tags: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'ML'],
-    href: 'https://github.com/caglaeren/algerian-forest-fires-prediction',
-    icon: Flame,
-  },
-  {
-    title: 'Exercises Web App',
-    desc: 'A sports exercises website built with React.js and RapidAPI. Designed to showcase various workout routines and exercise data with a clean, responsive interface.',
-    tags: ['React.js', 'RapidAPI', 'JavaScript', 'CSS'],
-    href: 'https://github.com/caglaeren/Exercisess',
-    icon: Code2,
-  },
-  {
-    title: 'CBS Project (Basarsoft)',
-    desc: 'Full-stack geospatial data management system built during Basarsoft internship. Uses .NET Web API, PostgreSQL, OpenLayers, and Node.js for real-time mapping and data visualization.',
-    tags: ['.NET', 'PostgreSQL', 'OpenLayers', 'Node.js', 'JavaScript'],
-    href: 'https://github.com/caglaeren/CBS-Project',
-    icon: Globe,
-  },
-]
+const PROJECTS_DATA: Record<Lang, { title: string; desc: string; tags: string[]; href: string; icon: React.ElementType }[]> = {
+  en: [
+    {
+      title: 'AI Fraud Detection System',
+      desc: 'Real-time fraud detection system using TensorFlow, FastAPI, Redis, and WebSockets for live transaction monitoring. Achieved 0.95 ROC-AUC on imbalanced financial data with 0.17% fraud cases.',
+      tags: ['Python', 'TensorFlow', 'FastAPI', 'Redis', 'Scikit-learn', 'Streamlit'],
+      href: 'https://github.com/caglaeren/fraud-ai-system',
+      icon: Brain,
+    },
+    {
+      title: 'Genomic-RAG for RARS1',
+      desc: 'Local RAG system using LangChain and ChromaDB for precise genomic research data analysis with an integrated local LLM, enhancing research efficiency by 40%.',
+      tags: ['Python', 'LangChain', 'ChromaDB', 'Ollama', 'RAG'],
+      href: 'https://github.com/caglaeren/genomic-rag-rars1',
+      icon: Dna,
+    },
+    {
+      title: 'Algerian Forest Fires Prediction',
+      desc: 'Machine learning project predicting forest fires in the Algerian region using data analysis and classification models.',
+      tags: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'ML'],
+      href: 'https://github.com/caglaeren/algerian-forest-fires-prediction',
+      icon: Flame,
+    },
+    {
+      title: 'Exercises Web App',
+      desc: 'A sports exercises website built with React.js and RapidAPI. Designed to showcase various workout routines and exercise data with a clean, responsive interface.',
+      tags: ['React.js', 'RapidAPI', 'JavaScript', 'CSS'],
+      href: 'https://github.com/caglaeren/Exercisess',
+      icon: Code2,
+    },
+    {
+      title: 'CBS Project (Basarsoft)',
+      desc: 'Full-stack geospatial data management system built during Basarsoft internship. Uses .NET Web API, PostgreSQL, OpenLayers, and Node.js for real-time mapping and data visualization.',
+      tags: ['.NET', 'PostgreSQL', 'OpenLayers', 'Node.js', 'JavaScript'],
+      href: 'https://github.com/caglaeren/CBS-Project',
+      icon: Globe,
+    },
+  ],
+  tr: [
+    {
+      title: 'AI Dolandırıcılık Tespit Sistemi',
+      desc: 'TensorFlow, FastAPI, Redis ve WebSockets kullanarak canlı işlem izleme için gerçek zamanlı dolandırıcılık tespit sistemi. Dengesiz finansal verilerde (%0.17 dolandırıcılık oranı) 0.95 ROC-AUC başarımı elde edildi.',
+      tags: ['Python', 'TensorFlow', 'FastAPI', 'Redis', 'Scikit-learn', 'Streamlit'],
+      href: 'https://github.com/caglaeren/fraud-ai-system',
+      icon: Brain,
+    },
+    {
+      title: 'RARS1 için Genomik-RAG',
+      desc: 'LangChain ve ChromaDB kullanarak, entegre yerel LLM ile hassas genomik araştırma verisi analizi için yerel RAG sistemi. Araştırma verimliliğini %40 artırır.',
+      tags: ['Python', 'LangChain', 'ChromaDB', 'Ollama', 'RAG'],
+      href: 'https://github.com/caglaeren/genomic-rag-rars1',
+      icon: Dna,
+    },
+    {
+      title: 'Cezayir Orman Yangınları Tahmini',
+      desc: 'Veri analizi ve sınıflandırma modelleri kullanarak Cezayir bölgesindeki orman yangınlarını tahmin eden makine öğrenmesi projesi.',
+      tags: ['Python', 'Scikit-learn', 'Pandas', 'Matplotlib', 'ML'],
+      href: 'https://github.com/caglaeren/algerian-forest-fires-prediction',
+      icon: Flame,
+    },
+    {
+      title: 'Egzersiz Web Uygulaması',
+      desc: 'React.js ve RapidAPI ile geliştirilen spor egzersizleri web sitesi. Çeşitli antrenman programlarını ve egzersiz verilerini temiz, responsive bir arayüzle sergilemek için tasarlandı.',
+      tags: ['React.js', 'RapidAPI', 'JavaScript', 'CSS'],
+      href: 'https://github.com/caglaeren/Exercisess',
+      icon: Code2,
+    },
+    {
+      title: 'CBS Projesi (Basarsoft)',
+      desc: 'Basarsoft stajı sırasında geliştirilen tam kapsamlı CBS veri yönetim sistemi. Gerçek zamanlı haritalama ve veri görselleştirme için .NET Web API, PostgreSQL, OpenLayers ve Node.js kullanır.',
+      tags: ['.NET', 'PostgreSQL', 'OpenLayers', 'Node.js', 'JavaScript'],
+      href: 'https://github.com/caglaeren/CBS-Project',
+      icon: Globe,
+    },
+  ],
+}
 
 /* Dna and Flame are not in lucide — we create simple SVG fallbacks */
 function Dna(props: React.SVGProps<SVGSVGElement>) {
@@ -607,7 +646,7 @@ export default function Home() {
 
               {/* Tagline */}
               <motion.p
-                className="text-xl sm:text-2xl md:text-3xl text-primary font-semibold mb-6"
+                className="text-xl sm:text-2xl md:text-3xl text-primary font-semibold mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.7 }}
@@ -628,7 +667,7 @@ export default function Home() {
               >
                 <Award className="size-4 text-primary" />
                 <span className="text-sm font-medium text-primary">
-                  Women in AI Ambassador for Türkiye
+                  {lang === 'tr' ? 'Türkiye için Women in AI Elçisi' : 'Women in AI Ambassador for Türkiye'}
                 </span>
                 <ExternalLink className="size-3 text-primary/60 group-hover:text-primary transition-colors" />
               </motion.a>
@@ -677,7 +716,7 @@ export default function Home() {
                 transition={{ delay: 1.05, duration: 0.7 }}
               >
                 <Button size="lg" className="text-base px-8 bg-gradient-to-r from-[oklch(0.6_0.22_295)] to-[oklch(0.55_0.2_310)] hover:from-[oklch(0.65_0.24_295)] hover:to-[oklch(0.6_0.22_310)] shadow-lg shadow-primary/20" asChild>
-                  <a href="/Tugba_Cagla_EREN_CV.pdf" download>
+                  <a href="/Tugba_Cagla_Eren_CV.pdf" download>
                     <Download className="size-4 mr-2" />
                     {t.hero.cv}
                   </a>
@@ -793,12 +832,22 @@ export default function Home() {
 
               {[
                 { ...t.timeline.flyrank, icon: Briefcase, isLeft: true },
-                { ...t.timeline.ambassador, icon: Globe, isLeft: false },
+                { ...t.timeline.ambassador, icon: Globe, isLeft: false, link: 'https://womeninaiglobalsummit.com/attendees/ambassadors' },
                 { ...t.timeline.free, icon: Sparkles, isLeft: true },
                 { ...t.timeline.graduation, icon: GraduationCap, isLeft: false },
                 { ...t.timeline.intern2, icon: Briefcase, isLeft: true },
                 { ...t.timeline.intern1, icon: Briefcase, isLeft: false },
-              ].map((item, i) => (
+              ].map((item, i) => {
+                const CardWrapper = ({ children }: { children: React.ReactNode }) =>
+                  'link' in item && item.link ? (
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="block h-full group/card">
+                      {children}
+                    </a>
+                  ) : (
+                    <>{children}</>
+                  )
+
+                return (
                 <FloatingSection key={i} delay={i * 0.12}>
                   <div className={`relative flex items-start gap-6 mb-12 ${item.isLeft ? 'md:flex-row' : 'md:flex-row-reverse'} pl-16 md:pl-0`}>
                     {/* Timeline dot */}
@@ -806,13 +855,17 @@ export default function Home() {
 
                     {/* Card */}
                     <div className={`w-full md:w-[calc(50%-2rem)] ${item.isLeft ? 'md:pr-8' : 'md:pl-8'}`}>
-                      <Card className="bg-card/60 backdrop-blur-sm border-border/60 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5">
+                      <CardWrapper>
+                      <Card className="bg-card/60 backdrop-blur-sm border-border/60 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/5 h-full">
                         <CardHeader className="pb-3">
                           <div className="flex items-center gap-2 mb-1">
                             <div className="p-2 rounded-lg bg-primary/10">
                               <item.icon className="size-4 text-primary" />
                             </div>
                             <CardTitle className="text-base">{item.title}</CardTitle>
+                            {'link' in item && item.link && (
+                              <ExternalLink className="size-3.5 text-muted-foreground ml-auto opacity-0 group-hover/card:opacity-100 transition-opacity" />
+                            )}
                           </div>
                           <CardDescription className="text-primary/80 font-medium text-sm">
                             {'school' in item ? `${item.school} · ${item.dept}` : item.company}
@@ -827,10 +880,12 @@ export default function Home() {
                           </p>
                         </CardContent>
                       </Card>
+                      </CardWrapper>
                     </div>
                   </div>
                 </FloatingSection>
-              ))}
+                )
+              })}
             </div>
           </div>
         </section>
@@ -851,8 +906,8 @@ export default function Home() {
             </FloatingSection>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {PROJECTS_DATA.map((project, pi) => (
-                <FloatingSection key={project.title} delay={pi * 0.1}>
+              {PROJECTS_DATA[lang].map((project, pi) => (
+                <FloatingSection key={project.title + '-' + pi} delay={pi * 0.1}>
                   <a
                     href={project.href}
                     target="_blank"
